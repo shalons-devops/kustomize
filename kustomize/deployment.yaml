@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: todo-app-2
+spec:
+ replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - image: hepzidavid/todo-list:v1
+          name: sample
